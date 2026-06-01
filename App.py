@@ -9,27 +9,29 @@ st.markdown("Chega de perder tempo procurando! Escolha um jogo abaixo e divirta-
 # Criando as abas de categorias para organizar os jogos
 aba_arcade, aba_retro, aba_puzzle = st.tabs(["🎮 Arcade Clássico", "👾 Retrô / Cobrinha", "🧩 Quebra-Cabeça"])
 
-# --- ABA 1: ARCADE CLÁSSICO (Pacman) ---
+# --- ABA 1: ARCADE CLÁSSICO (Pacman Aberto) ---
 with aba_arcade:
-    st.subheader("Playman / Pacman")
-    st.caption("Comandos: Use as setas do teclado para mover o Pacman pelo labirinto.")
+    st.subheader("Pacman Clássico")
+    st.caption("Comandos: Clique na tela do jogo e use as setas do teclado para mover.")
     
-    # Abre o jogo direto na tela através de um iframe limpo
-    st.components.v1.iframe("https://pacman.live/play.html", height=600, scrolling=False)
+    # Versão open-source hospedada no GitHub Pages que aceita iframe
+    st.components.v1.iframe("https://macek.github.io/google_pacman/", height=450, scrolling=False)
 
-# --- ABA 2: RETRÔ (Jogo da Cobrinha do Google) ---
+# --- ABA 2: RETRÔ (Jogo da Cobrinha Clássico) ---
 with aba_retro:
     st.subheader("Snake Game (Jogo da Cobrinha)")
-    st.caption("Comandos: Use as setas do teclado para comer as frutas e crescer.")
+    st.caption("Comandos: Use as setas do teclado para coletar os pontos.")
     
-    st.components.v1.iframe("https://www.google.com/fbx?fbx=snake", height=550, scrolling=False)
+    # Versão aberta e nostálgica da cobrinha
+    st.components.v1.iframe("https://thesnakegame.github.io/", height=500, scrolling=False)
 
-# --- ABA 3: QUEBRA-CABEÇA (2048) ---
+# --- ABA 3: QUEBRA-CABEÇA (2048 Open-Source) ---
 with aba_puzzle:
-    st.subheader("2048 Clássico")
-    st.caption("Comandos: Use as setas para somar os blocos iguais até chegar no bloco 2048.")
+    st.subheader("2048")
+    st.caption("Comandos: Use as setas para juntar os números iguais.")
     
-    st.components.v1.iframe("https://play2048.co/", height=650, scrolling=False)
+    # O criador original do 2048 (Gabriele Cirulli) deixa o código aberto no GitHub Pages
+    st.components.v1.iframe("https://gabrielecirulli.github.io/2048/", height=650, scrolling=False)
 
 # --- MENU LATERAL ---
 st.sidebar.title("🎮 Sobre a Central")
